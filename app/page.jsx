@@ -65,7 +65,7 @@ export default function Home() {
           {messages.length === 0 && (
             <div className="text-center text-gray-500 mt-20">
               <p className="text-lg">Start a conversation with Ainu!</p>
-              <p className="text-sm mt-2">Powered by Khaya Ijaz <br /> CFO - Anam Naheed</p>
+              <p className="text-sm mt-2">Powered by Khayam Ijaz <br /> CFO - Anam Naheed</p>
             </div>
           )}
           {messages.map((message, index) => (

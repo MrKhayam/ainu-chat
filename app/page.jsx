@@ -47,16 +47,16 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-[100dvh] bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white flex flex-col">
+    <div className="min-h-[100dvh] bg-zinc-900 text-white flex flex-col">
       {/* Header */}
-      <header className="p-6 bg-gray-900/80 backdrop-blur-md border-b border-gray-700">
+      <header className="p-3 bg-zinc-900 backdrop-blur-md border-b border-gray-700">
         <h1 className="text-3xl font-bold tracking-tight">
-          <span className="text-cyan-400">Ainu</span> <span className="text-gray-400">— Your Cosmic Companion</span>
+          <span className="text-white">Ainu</span> 
         </h1>
       </header>
 
       {/* Chat Area */}
-      <main className="flex-1 p-6 overflow-y-auto max-w-4xl mx-auto w-full">
+      <main className="flex-1 md:p-6 p-2 overflow-y-auto max-w-4xl mx-auto w-full">
         <div className="space-y-4">
           {messages.length === 0 ? (
             <div className="text-center text-gray-400 italic animate-pulse">
@@ -71,7 +71,7 @@ export default function Home() {
                 <div
                   className={`max-w-xl p-4 rounded-lg shadow-lg ${
                     msg.role === 'user'
-                      ? 'bg-cyan-500 text-white'
+                      ? 'bg-[#dadada] text-black'
                       : 'bg-gray-700 text-gray-100'
                   }`}
                 >
@@ -123,7 +123,7 @@ export default function Home() {
           />
           <button
             type="submit"
-            className="md:px-6 md:py-3 px-3 sm:py-3 py-2 sm:px-5 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors"
+            className="md:px-6 md:py-3 px-3 sm:py-3 py-2 sm:px-5 bg-white text-black rounded-lg hover:bg-gray-300 cursor-pointer transition-colors"
           >
             Send
           </button>

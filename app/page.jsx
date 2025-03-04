@@ -112,18 +112,18 @@ export default function Home() {
       </main>
 
       {/* Input Area */}
-      <footer className="p-6 bg-gray-900/80 backdrop-blur-md border-t border-gray-700">
-        <form onSubmit={sendMessage} className="max-w-4xl mx-auto flex gap-3">
+      <footer className="md:p-6 bg-gray-900/80 p-2 overflow-hidden backdrop-blur-md border-t border-gray-700">
+        <form onSubmit={sendMessage} className="md:max-w-4xl overflow-hidden w-full mx-auto flex items-center justify-center gap-1 md:gap-3 sm:gap-3">
           <input
             type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            className="flex-1 p-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+            className="flex-1 md:p-3 p-2 sm:p-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none"
             placeholder="Ask Ainu anything..."
           />
           <button
             type="submit"
-            className="px-6 py-3 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors"
+            className="md:px-6 md:py-3 px-3 sm:py-3 py-2 sm:px-5 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors"
           >
             Send
           </button>

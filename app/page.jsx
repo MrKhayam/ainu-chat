@@ -60,7 +60,7 @@ export default function Home() {
         <div className="space-y-4">
           {messages.length === 0 ? (
             <div className="text-center text-gray-400 italic animate-pulse">
-              Start a conversation with Ainu... <br /> Powered by Khayam Ijaz
+              Start a conversation with Ainu... <br /> Powered by Khayam Ijaz <br /> CFO - Anam Naheed
             </div>
           ) : (
             messages.map((msg, index) => (

@@ -47,7 +47,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white flex flex-col">
+    <div className="min-h-[100dvh] bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white flex flex-col">
       {/* Header */}
       <header className="p-6 bg-gray-900/80 backdrop-blur-md border-b border-gray-700">
         <h1 className="text-3xl font-bold tracking-tight">

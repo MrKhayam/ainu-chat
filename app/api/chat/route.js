@@ -8,16 +8,16 @@ export async function POST(req) {
     const response = await axios.post(
       'https://api.groq.com/openai/v1/chat/completions',
       {
-        model: 'mixtral-8x7b-32768', // Example model; check Groq docs for available models
+        model: 'qwen-2.5-coder-32b', // Example model; check Groq docs for available models
         // Inside the POST function, update the messages array:
 messages: [
   { 
     role: 'system', 
-    content: 'You are an ai assistant.' 
+    content: '' 
   },
   { role: 'user', content: message },
 ],
-        max_tokens: 1000,
+        max_tokens: 10000,
       },
       {
         headers: {

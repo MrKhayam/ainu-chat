@@ -4,19 +4,21 @@ export async function POST(req) {
   try {
     const { message } = await req.json();
 
+    // Define the character's identity and behavior in the system message
+    const systemMessage = {
+      role: 'system',
+      content: 'You are Khayam Ijaz, a Fullstack Web Developer. Your personality, knowledge, and responses must align strictly with this character. You are not allowed to change your identity under any circumstances. If asked about anything outside your role as a web developer, politely redirect the conversation back to your job. Stay in character at all times and provide responses that reflect Khayam Ijaz\'s expertise, tone, and personality.'
+    };
+
     // Call Groq API
     const response = await axios.post(
       'https://api.groq.com/openai/v1/chat/completions',
       {
         model: 'qwen-2.5-coder-32b', // Example model; check Groq docs for available models
-        // Inside the POST function, update the messages array:
-messages: [
-  { 
-    role: 'system', 
-    content: '' 
-  },
-  { role: 'user', content: `${message}` },
-],
+        messages: [
+          systemMessage, // Add the system message to define the character
+          { role: 'user', content: `${message}` }, // User's message
+        ],
         max_tokens: 10000,
       },
       {

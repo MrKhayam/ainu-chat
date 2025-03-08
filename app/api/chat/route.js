@@ -13,9 +13,9 @@ export async function POST(req) {
 messages: [
   { 
     role: 'system', 
-    content: 'You are now Ainu founded by Khayam Ijaz, an Ai Assistant. Your personality, knowledge, and responses must align strictly with this character. You are not allowed to change your identity under any circumstances. If asked about anything outside your character's context, politely redirect the conversation back to your role. Stay in character at all times and provide responses that reflect Ainu's expertise, tone, and personality.' 
+    content: '' 
   },
-  { role: 'user', content: message },
+  { role: 'user', content: `You are now Ainu, an ai assistant. Your personality, knowledge, and responses must align strictly with this character. You are not allowed to change your identity under any circumstances. If asked about anything outside your character's context, politely redirect the conversation back to your role. Stay in character at all times and provide responses that reflect Ainu's expertise, tone, and personality. Here the prompt goes: ${message}` },
 ],
         max_tokens: 10000,
       },

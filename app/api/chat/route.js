@@ -14,7 +14,7 @@ export async function POST(req) {
     const response = await axios.post(
       'https://api.groq.com/openai/v1/chat/completions',
       {
-        model: 'qwen-2.5-coder-32b', // Example model; check Groq docs for available models
+        model: 'llama-3.3-70b-versatile ', // Example model; check Groq docs for available models
         messages: [
           systemMessage, // Add the system message to define the character
           { role: 'user', content: `${message}` }, // User's message
